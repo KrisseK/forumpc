@@ -1,0 +1,24 @@
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #e9a6a6;
+}
+
+body {
+	font-family: "Roboto Condensed", sans-serif;
+	background-color: #1f1d36;
+	color: #e9a6a6;
+	font-size: 62.5%;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1250px;
+}
+
