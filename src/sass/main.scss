@@ -12,13 +12,75 @@ a {
 
 body {
 	font-family: "Roboto Condensed", sans-serif;
-	background-color: #1f1d36;
-	color: #e9a6a6;
+	background-color: #e0dfe9;
+	color: #5c5050;
 	font-size: 62.5%;
+	height: 1000px;
 }
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1250px;
 }
+.upper-site {
+	&::after {
+		content:'';
+		position: absolute;
+		width: 100%;
+		border-bottom: 1px solid black;
+	}
+	.logo-img {
+		position: fixed;
+		left: 10px;
+		top: 10px;
+		width: 4rem;
+		height: 4rem;
+		transition: transform 0.2s linear;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	.title {
+		justify-content: center;
+		text-align: center;
+		h1 {
+			font-size: 4rem;
+			color: black;
+		}
+		h2 {
+			font-size: 3rem;
+			color: black;
+		}
+	}
+	.right-menu {
+		color: #000;
+		display: inline-flex;
+		position: absolute;
+		right: 50px;
+		top: 50px;
+		.acc-name {
+			margin: 0 15px;
+			font-size: 1.5rem;
+			transition: text-shadow 0.1s linear;
+			&:hover {
+				cursor: pointer;
+				text-shadow: 1px 1px 1px black;
+			}
+		}
+		// .messages {
+		// 	font-size: 1.5rem;
+		// }
+		.dark-light-mode {
+			// padding: 0 15px;
+			font-size: 1.5rem;
+			border-radius: 50%;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
 
+@import "./small";
+@import "./medium";
+@import "./large";
