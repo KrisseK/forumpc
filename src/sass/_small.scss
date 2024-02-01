@@ -1,40 +1,44 @@
 @media (max-width: 576px) {
-	header{
-		.upper-site {
-			&::after {
-				display: none;
-			}
-			.logo-img {
-				display:none;
-			}
-			.title {
-				width: 100%;
-				h1 {
-					font-size: 1.8rem;
-				}
-				h2 {
-					font-size: 1.2rem;
-				}
-			}
-			.right-menu {
-				.acc-name {
+	body {
+		background-image: url("../../dist/img/background-mobile.jpg");
+		header {
+			.upper-site {
+				&::after {
 					display: none;
 				}
-				.right-burger-menu {
-					display: flex;
-					justify-content: center;
-					align-items: start;
-					margin-top: 10px;
-					font-size: 2rem;
+				.logo-img {
+					display: none;
+				}
+				.title {
+					width: 100%;
+					h1 {
+						font-size: 1.8rem;
+					}
+					h2 {
+						font-size: 1.2rem;
+					}
+				}
+				.right-menu {
+					.acc-name {
+						display: none;
+					}
+					.right-burger-menu {
+						display: flex;
+						justify-content: center;
+						align-items: start;
+						margin-top: 10px;
+						font-size: 2rem;
+					}
 				}
 			}
+			.nav {
+				display: block;
+			}
 		}
-
 	}
 }
-
 @media (min-width: 576px) {
-    .right-burger-menu {
-        display: none;
-    }
+	.right-burger-menu {
+		display: none;
+	}
 }

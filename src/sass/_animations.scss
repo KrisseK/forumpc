@@ -1,0 +1,72 @@
+//navigation animations//
+.nav {
+	&__item {
+		span,
+		span::after,
+		span::before {
+			transition: 0.3s;
+		}
+		span::before,
+		span::after {
+			content: "";
+			position: absolute;
+			width: 0;
+			bottom: 0;
+			border-bottom: 2px solid rgb(255, 255, 255);
+		}
+		span::before {
+			right: 50%;
+		}
+		span::after {
+			left: 50%;
+		}
+		span:hover::before,
+		span:hover::after {
+			width: 50%;
+		}
+	}
+}
+.forum-section {
+	&__topics {
+        ul{
+            li{
+                a{
+                    position: relative;
+                    padding: 10px;
+                }
+                a::before,
+                a::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                }
+                a::before {
+                    top: -2px;
+                    left: -8px;
+                    border-top: 0 solid white;
+                    border-left: 0 solid white;
+                }
+                a::after {
+                    bottom: -2px;
+                    right: -8px;
+                    border-bottom: 0 solid white;
+                    border-right: 0 solid white;
+                }
+                a:hover:before,
+                a:hover:after {
+                    width: 2rem;
+                    height: 2rem;
+                }
+                a:hover::before {
+                    border-top: 1px solid #fff;
+                    border-left: 1px solid #fff;
+                }
+                a:hover::after{
+                    border-bottom: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                }
+            }
+        }
+	}
+}

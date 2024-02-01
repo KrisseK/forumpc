@@ -5,39 +5,56 @@
 	margin: 0;
 	padding: 0;
 }
-a {
-	text-decoration: none;
-	color: #e9a6a6;
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
 	font-family: "Roboto Condensed", sans-serif;
-	background-color: #e0dfe9;
-	color: #5c5050;
 	font-size: 62.5%;
-	scroll-behavior: smooth;
-	height: 1000px;
+	height: 2000px;
+	background-image: url("../../dist/img/background-large.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 }
+
+.hero-shadow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1250px;
+}
+
+.headline {
+	display: block;
+	font-size: 3rem;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 header {
-	.wrapper {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 1250px;
-	}
 	.upper-site {
 		display: inline-flex;
 		justify-content: space-around;
 		width: 100%;
 		&::after {
-			content:'';
+			content: "";
 			position: absolute;
 			left: 0;
 			width: 100%;
 			border-bottom: 1px solid black;
 		}
 		.logo-img {
-			margin-top: 10px;
-			margin-left: 10px;
 			width: 4rem;
 			height: 4rem;
 			transition: transform 0.2s linear;
@@ -50,42 +67,148 @@ header {
 			text-align: center;
 			h1 {
 				font-size: 4rem;
-				color: black;
+				color: rgb(255, 255, 255);
 			}
 			h2 {
 				font-size: 3rem;
-				color: black;
+				color: rgb(255, 255, 255);
 			}
 		}
 		.right-menu {
 			padding: 10px;
-			color: #000;
+			color: #ffffff;
 			display: block;
 			.acc-name {
 				margin-top: 10px;
 				font-size: 1.5rem;
-				transition: text-shadow 0.1s linear;
-				&:hover {
-					cursor: pointer;
-					text-shadow: 1px 1px 1px black;
-				}
 			}
 			.dark-light-mode {
 				text-align: center;
 				font-size: 1.5rem;
-				transition: transform .1s linear;
+				transition: transform 0.1s linear;
 				&:hover {
 					cursor: pointer;
-					transform: scale(1.1)
+					transform: scale(1.1);
 				}
 			}
 		}
 	}
-
+	.nav {
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		flex-wrap: wrap;
+		&__item {
+			position: relative;
+			font-size: 1.4rem;
+			padding: 15px;
+			margin-bottom: 50px;
+			a {
+				text-decoration: none;
+				color: #ffffff;
+			}
+			span {
+				text-transform: uppercase;
+			}
+		}
+	}
 }
 
-
-
+main {
+	.forum-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10px;
+		text-align: center;
+		&__topics {
+			padding: 10px;
+			width: 100%;
+			.topics__header {
+				font-size: 2rem;
+				margin-bottom: 30px;
+				color: #fff;
+			}
+			.topics__arrow {
+				font-size: 2rem;
+				color: #fff;
+				margin: 20px;
+			}
+			ul {
+				li {
+					font-size: 2rem;
+					padding: 10px;
+					margin: 5px;
+					color: #b39e9e;
+					list-style-type: none;
+					a,
+					a::before,
+					a::after {
+						transition: 0.3s;
+					}
+					a {
+						text-decoration: none;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.computer {
+		height: 100vh;
+		&__header {
+			display: block;
+			text-align: center;
+			font-size: 2rem;
+			color: #fff;
+		}
+		&__box {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			margin: 0 50px;
+			.box {
+				background-position: center;
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 250px;
+				width: 250px;
+				font-size: 1.5rem;
+				margin: 15px;
+				a {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					text-decoration: none;
+					text-transform: uppercase;
+					img {
+						height: 250px;
+						width: 250px;
+					}
+					span {
+						color: #fff;
+					}
+				}
+			}
+			.first-box{
+				background-image: url('../../dist/img/myComputer/procesor-large.jpg')
+			}
+			.second-box{
+				background-image: url('../../dist/img/myComputer/graphic-card-large.jpg')
+			}
+			.third-box{
+				background-image: url('../../dist/img/myComputer/ram-large.jpg')
+			}
+			.first-box{
+				background-image: url('../../dist/img/myComputer/procesor-large.jpg')
+			}
+		}
+	}
+}
 @import "./small";
 @import "./medium";
 @import "./large";
+@import "./animations";
