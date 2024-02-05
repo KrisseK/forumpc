@@ -36,6 +36,36 @@
 			}
 		}
 	}
+	main {
+		.computer {
+			&__box {
+				.first-box {
+					background-image: url("../../dist/img/myComputer/procesor-small.jpg");
+				}
+				.second-box {
+					background-image: url("../../dist/img/myComputer/graphic-card-small.jpg");
+				}
+				.third-box {
+					background-image: url("../../dist/img/myComputer/ram-small.jpg");
+				}
+				.fourth-box {
+					background-image: url("../../dist/img/myComputer/charger-small.jpg");
+				}
+				.fifth-box {
+					background-image: url("../../dist/img/myComputer/fan-small.jpg");
+				}
+				.sixth-box {
+					background-image: url("../../dist/img/myComputer/motherboard-small.jpg");
+				}
+				.seventh-box {
+					background-image: url("../../dist/img/myComputer/disc-\ small.jpg");
+				}
+				.eigth-box {
+					background-image: url("../../dist/img/myComputer/monitor-small.jpg");
+				}
+			}
+		}
+	}
 }
 @media (min-width: 576px) {
 	.right-burger-menu {

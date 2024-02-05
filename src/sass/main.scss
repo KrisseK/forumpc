@@ -28,6 +28,13 @@ body {
 	z-index: -1;
 }
 
+.shadow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -40,6 +47,8 @@ body {
 	color: #fff;
 	text-align: center;
 	text-transform: uppercase;
+	margin: 50px 50px;
+	text-decoration: underline;
 }
 
 header {
@@ -154,8 +163,8 @@ main {
 			}
 		}
 	}
+
 	.computer {
-		height: 100vh;
 		&__header {
 			display: block;
 			text-align: center;
@@ -167,46 +176,83 @@ main {
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
-			margin: 0 50px;
-			.box {
-				background-position: center;
-				background-size: cover;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 250px;
-				width: 250px;
-				font-size: 1.5rem;
-				margin: 15px;
-				a {
+			margin-bottom: 30px;
+			text-align: center;
+			div {
+				.box {
+					position: relative;
 					display: flex;
 					justify-content: center;
+					height: 250px;
+					width: 250px;
+					margin: 15px;
+					background-position: center;
+					background-size: cover;
 					align-items: center;
+					font-size: 1.5rem;
 					text-decoration: none;
-					text-transform: uppercase;
-					img {
-						height: 250px;
-						width: 250px;
-					}
 					span {
+						text-transform: uppercase;
 						color: #fff;
+						z-index: 2;
 					}
 				}
 			}
-			.first-box{
-				background-image: url('../../dist/img/myComputer/procesor-large.jpg')
+			.first-box {
+				background-image: url("../../dist/img/myComputer/procesor-large.jpg");
 			}
-			.second-box{
-				background-image: url('../../dist/img/myComputer/graphic-card-large.jpg')
+			.second-box {
+				background-image: url("../../dist/img/myComputer/graphic-card-large.jpg");
 			}
-			.third-box{
-				background-image: url('../../dist/img/myComputer/ram-large.jpg')
+			.third-box {
+				background-image: url("../../dist/img/myComputer/ram-large.jpg");
 			}
-			.first-box{
-				background-image: url('../../dist/img/myComputer/procesor-large.jpg')
+			.fourth-box {
+				background-image: url("../../dist/img/myComputer/charger-large.jpg");
+			}
+			.fifth-box {
+				background-image: url("../../dist/img/myComputer/fan-large.jpg");
+			}
+			.sixth-box {
+				background-image: url("../../dist/img/myComputer/motherboard-large.jpg");
+			}
+			.seventh-box {
+				background-image: url("../../dist/img/myComputer/disc-large.jpg");
+			}
+			.eigth-box {
+				background-image: url("../../dist/img/myComputer/monitor-large.jpg");
 			}
 		}
 	}
+
+	.news {
+		display: block;
+		&__header {
+			text-align: center;
+			font-size: 2rem;
+			margin-bottom: 30px;
+			color: #fff;
+		}
+		&__box {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			margin: 10px 20px;
+			color: #fff;
+			border: 2px solid white;
+			background-color: rgba(0, 0, 0, 0.6);
+			.news-title {
+				font-size: 2rem;
+			}
+			.news-description {
+				justify-content: end;
+				font-size: 1.7rem;
+			}
+		}
+	}
+	
 }
 @import "./small";
 @import "./medium";
